@@ -51,7 +51,11 @@ public class ZombieMovement : MonoBehaviour
 		}
 		
 		if (nav.velocity.magnitude > 0){
+			if (chase) {
+			anim.Play(animations[2].name);
+			}else{
 			anim.Play(animations[0].name);
+			}
 		} else {
 			anim.Play(animations[1].name);
 		}
